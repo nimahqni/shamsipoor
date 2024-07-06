@@ -3,10 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
     <title>MQ-8 Module</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
+body {
+    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background-color: #114b5f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar nav ul li {
+    float: right;
+}
+
+.navbar nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #1a936f;
+}
+
+.navbar nav ul .submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar nav ul li:hover .submenu {
+    display: block;
+}
+
+.navbar nav ul .submenu li {
+    float: none;
+}
+
+.navbar nav ul .submenu li a {
+    color: black;
+    padding: 12px 16px;
+}
+
+.navbar nav ul .submenu li a:hover {
+    background-color: #ddd;
+}
+
+.banner {
+    background-color: #1a936f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner img {
+
+    margin-bottom: 15px;
+}
+.description img {
+    margin-right: 100px;
+    width: 360px;
+    height: 330px;
+}
+.content {
+
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+
+.separator {
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.download-link2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-link2 a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a936f;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.download-link2 a:hover {
+    background-color: #114b5f;
+}
+
+.download-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a936f;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.download-link a:hover {
+    background-color: #114b5f;
+}
+
+.code-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 360px;
+}
+
+.code-box .copy-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #1a936f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.code-box pre {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+table th {
+    background-color: #1a936f;
+    color: white;
+}
+
+.footer-links {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #1a936f;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-to-top {
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a936f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.back-to-top:hover {
+    background-color: #114b5f;
+}
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -130,7 +359,7 @@
             </div>
             <hr class="separator">
             <p>پس از اجرای کد در سریال مانیتور مشاهده می کنید:</p>
-            <img src="/assets/img/mq8/serial.jpg" alt="نمودار" width: 760px; height: 630px>
+            <img src="/assets/img/mq8/serial.jpg" alt="نمودار" width: 360px; height: 330px>
             <div class="download-link">
                 <a href="https://www.winsen-sensor.com/product/mq-8.html" target="_blank">مشاهده در فروشگاه </a>
             </div>
