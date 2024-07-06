@@ -99,8 +99,38 @@
                 <br>
                 مطابق مدار زیر، ماژول را به آردوینو وصل کنید.
             </p>
-            <img src="assets/img/mq8/1.png" alt="سیم بندی"     width: 100px; height: 100px;>
+            <img src="assets/img/mq8/1.png" alt="سیم بندی">
             <hr class="separator">
+            <h3>گاک دوم : </h3>
+            <p>کد زیر را روی برد آردوینوی خود آپلود کنید</p>
+            <div class="code-box" >
+                <button class="copy-btn" onclick="copyCode()">کپی</button>
+                <pre><code class="language-cpp">
+                    /*
+                    modified on Sep 28, 2020
+                    Modified by MohammedDamirchi from Arduino Examples
+                    Home<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="&#8220;Home&#8221; &#8212; Electropeak" src="https://electropeak.com/learn/embed/#?secret=fQknoWAJum" data-secret="fQknoWAJum" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                  */
+                  
+                  // the setup routine runs once when you press reset:
+                  void setup() {
+                    // initialize serial communication at 9600 bits per second:
+                    Serial.begin(9600);
+                  }
+                  
+                  // the loop routine runs over and over again forever:
+                  void loop() {
+                    // read the input on analog pin 0:
+                    int sensorValue = analogRead(A0);
+                    // print out the value you read:
+                    Serial.println(sensorValue);
+                    delay(20);
+                  }
+                </code></pre>
+            </div>
+            <hr class="separator">
+            <p>پس از اجرای کد در سریال مانیتور مشاهده می کنید:</p>
+            <img src="/assets/img/mq8/serial.jpg" alt="نمودار" width: 760px; height: 630px>
             <div class="download-link">
                 <a href="https://www.winsen-sensor.com/product/mq-8.html" target="_blank">مشاهده در فروشگاه </a>
             </div>
@@ -120,6 +150,24 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <script>
+
+function copyCode() {
+            const codeBox = document.querySelector('.code-box code');
+            const range = document.createRange();
+            range.selectNode(codeBox);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+                document.execCommand('copy');
+                alert('کد کپی شد!');
+            } catch (err) {
+                alert('خطا در کپی کردن کد');
+            }
+
+            window.getSelection().removeAllRanges();
+        }
+
         // Scroll to top functionality
         const backToTopButton = document.getElementById('back-to-top');
         window.addEventListener('scroll', function() {

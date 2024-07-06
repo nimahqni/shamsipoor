@@ -86,13 +86,16 @@ header .logo img {
 }
 
 .banner img {
-    width: 370px;
-    height: 290px;
+
     margin-bottom: 15px;
 }
-
+.description img {
+    margin-right: 100px;
+    width: 760px;
+    height: 630px;
+}
 .content {
-    max-width: 800px;
+
     margin: 20px auto;
     padding: 0 20px;
     text-align: justify;
@@ -141,6 +144,31 @@ header .logo img {
 
 .download-link a:hover {
     background-color: #114b5f;
+}
+
+.code-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 760px;
+}
+
+.code-box .copy-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #1a936f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.code-box pre {
+    margin: 0;
 }
 
 table {
