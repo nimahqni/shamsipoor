@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    <title>MQ-8 Module</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/favicon.png" alt="لوگو">
+        </div>
+        <h1>ایران‌ماژول</h1>
+    </header>
+    
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#home">صفحه اصلی</a></li>
+                <li><a href="https://opticniroo.ir/lighting-shop/">فروشگاه</a></li>
+                <li><a href="#products">محصولات</a></li>
+                <li><a href="https://opticniroo.ir/%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d9%85%d8%a7-%d8%a7%d9%be%d8%aa%db%8c%da%a9-%d9%86%db%8c%d8%b1%d9%88/">درباره ما</a></li>
+                <li><a href="https://opticniroo.ir/2022/08/22/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7-%d9%88-%d9%be%d8%b4%d8%aa%db%8c%d8%a8%d8%a7%d9%86%db%8c/">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="assets/img/mq8/mq8.jpg" alt="تصویر ماژول Uno">
+        <div class="info">
+            <h2>  آموزش راه اندازی ماژول سنسور گاز هیدروژن MQ-8 با آردوینو  </h2>
+            <p>نویسنده: نیما حقانی و محمدمهدی حاتمی</p>
+        </div>
+    </div>
+    <div class="content">
+        <br>
+        <div class="description">
+            <p>
+              سنسورهای گاز سری MQ از هیتر داخلی کوچک به همراه سنسور الکتروشیمیایی بهره می گیرند. این سنسورها نسبت به طیف گسترده ای از گازها حساس اند. سنسور گاز هیدروژن MQ-8 مناسب برای سنجش غلظت هیدروژن موجود در هوا می باشد. این سنسور توانایی اندازه گیری غلظت گاز هیدروژن را از 100ppm تا 1000ppm را دارد. حساسیت بالا نسبت به هیدروژن و حساسیت کم نسبت به الکل و پاسخ گویی سریع از خصوصیات این سنسور است.
+                <br>
+                <br>
+                کاربردها :
+                <br>
+                تشخیص نشتی گاز هیدروژن: در صنایع و آزمایشگاه‌ها برای جلوگیری از حوادث ناشی از نشتی گاز هیدروژن استفاده می‌شود.
+                سیستم‌های ایمنی: در سیستم‌های هشدار دهنده گاز برای اطلاع‌رسانی به کاربران در صورت وجود نشتی گاز.
+                خودروهای هیدروژنی: در خودروهای سوخت سلولی برای مانیتورینگ و کنترل میزان گاز هیدروژن.
+            </p>
+            <hr class="separator">
+            <div class="download-link2">
+                <a href="https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Biometric/MQ-8.pdf" download>دانلود دیتاشیت</a>
+            </div>
+            <h3> سنسور MQ-8 دارای چهار پین است که به صورت زیر عمل می‌کنند: </h3>
+            <ul>
+                <li> VCC: تغذیه سنسور </li>
+                <li> GND: زمین </li>
+                <li> DO (Digital Output): خروجی دیجیتال </li>
+                <li> AO (Analog Output): خروجی آنالوگ </li>
+            </ul>
+
+            <hr class="separator">
+            <br>
+		<h3>اتصالات</h3>
+            <p>
+                برای اتصال سنسور MQ-8 به آردوینو، می‌توانید از پین‌های زیر استفاده کنید:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>پین سنسور</th>
+                        <th>اتصال به آردوینو</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>VCC</td>
+                        <td>5V</td>
+                    </tr>
+                    <tr>
+                        <td>GND</td>
+                        <td>GND</td>
+                    </tr>
+                    <tr>
+                        <td>AO</td>
+                        <td>A0</td>
+                    </tr>
+                    <tr>
+                        <td>DO</td>
+                        <td>D2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr class="separator">
+            <p>
+                <h3>راه اندازی ماژول سنسور هیدروژن MQ-8 با آردوینو</h3>
+                گام اول: سیم بندی
+                <br>
+                مطابق مدار زیر، ماژول را به آردوینو وصل کنید.
+            </p>
+            <img src="assets/img/mq8/1.png" alt="سیم بندی">
+            <hr class="separator">
+            <h3>گاک دوم : </h3>
+            <p>کد زیر را روی برد آردوینوی خود آپلود کنید</p>
+            <div class="code-box" >
+                <button class="copy-btn" onclick="copyCode()">کپی</button>
+                <pre><code class="language-cpp">
+                    /*
+                    modified on Sep 28, 2020
+                    Modified by MohammedDamirchi from Arduino Examples
+                    Home<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="&#8220;Home&#8221; &#8212; Electropeak" src="https://electropeak.com/learn/embed/#?secret=fQknoWAJum" data-secret="fQknoWAJum" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                  */
+                  
+                  // the setup routine runs once when you press reset:
+                  void setup() {
+                    // initialize serial communication at 9600 bits per second:
+                    Serial.begin(9600);
+                  }
+                  
+                  // the loop routine runs over and over again forever:
+                  void loop() {
+                    // read the input on analog pin 0:
+                    int sensorValue = analogRead(A0);
+                    // print out the value you read:
+                    Serial.println(sensorValue);
+                    delay(20);
+                  }
+                </code></pre>
+            </div>
+            <hr class="separator">
+            <p>پس از اجرای کد در سریال مانیتور مشاهده می کنید:</p>
+            <img src="/assets/img/mq8/serial.jpg" alt="نمودار" width: 760px; height: 630px>
+            <div class="download-link">
+                <a href="https://www.winsen-sensor.com/product/mq-8.html" target="_blank">مشاهده در فروشگاه </a>
+            </div>
+            <hr class="separator">
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">لینک ۱</a> |
+            <a href="#">لینک ۲</a> |
+            <a href="#">لینک ۳</a>
+        </div>
+        <p>© 2024 all rights reserved nimaw.mamad</p>
+        <a href="#" id="back-to-top" class="back-to-top"> &#8679; </a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script>
+
+function copyCode() {
+            const codeBox = document.querySelector('.code-box code');
+            const range = document.createRange();
+            range.selectNode(codeBox);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+                document.execCommand('copy');
+                alert('کد کپی شد!');
+            } catch (err) {
+                alert('خطا در کپی کردن کد');
+            }
+
+            window.getSelection().removeAllRanges();
+        }
+
+        // Scroll to top functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
