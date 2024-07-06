@@ -104,12 +104,6 @@ header .logo img {
     text-align: justify;
 }
 
-.content .left-image {
-    float: left;
-    margin: 0 20px 20px 0;
-    max-width: 300px;
-    height: auto;
-}
 
 .separator {
     margin-top: 20px;
