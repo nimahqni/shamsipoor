@@ -86,11 +86,16 @@ header .logo img {
 }
 
 .banner img {
-    max-width: 100%;
-    height: auto;
+    width: 350px;
+    height: 290px;
     margin-bottom: 15px;
 }
 
+.content img {
+
+    width: 350px;
+    height: 290px;
+}
 .content {
     max-width: 800px;
     margin: 20px auto;
